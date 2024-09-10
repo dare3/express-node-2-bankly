@@ -37,3 +37,47 @@ function timeWord(time) {
   // Export the function for testing
   module.exports = timeWord;
   
+//   Pseudocode for timeToWords
+// Input: Receive a string time in the format "HH:MM".
+
+// Split the Input:
+
+// Split the time string into hourStr and minuteStr using the colon (:) as the delimiter.
+// Convert hourStr and minuteStr to integers hour and minute.
+// Define an Array of Words for Numbers:
+
+// Create an array numbers containing words for numbers 0 to 59.
+// Handle Special Cases:
+
+// If hour is 0 and minute is 0, return "midnight".
+// If hour is 12 and minute is 0, return "noon".
+// Determine Period (AM or PM):
+
+// If hour is less than 12, set period to "am".
+// Otherwise, set period to "pm".
+// Convert 24-hour Format to 12-hour Format:
+
+// If hour % 12 is 0, set hourWord to "twelve".
+// Otherwise, set hourWord to the corresponding word from the numbers array using hour % 12.
+// Convert Minutes to Words:
+
+// If minute is 0, set minuteWord to "o’clock".
+// If minute is less than 10, set minuteWord to "oh" followed by the corresponding word from numbers.
+// Otherwise, set minuteWord to the corresponding word from the numbers array using minute.
+// Construct the Output:
+
+// If minute is 0, concatenate hourWord, minuteWord, and period.
+// Otherwise, concatenate hourWord, minuteWord, and period.
+// Return the Result:
+
+// Return the constructed string as the time in words.
+// Example Steps for Input "06:18"
+// Split "06:18" into hourStr = "06" and minuteStr = "18".
+// Convert to integers: hour = 6, minute = 18.
+// Define number words from 0 to 59.
+// No special case matches.
+// hour < 12, so period = "am".
+// hourWord = "six".
+// minute = 18, so minuteWord = "eighteen".
+// Construct output: "six eighteen am".
+// Return "six eighteen am".
